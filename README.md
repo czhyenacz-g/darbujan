@@ -27,7 +27,7 @@ Není to CV. Je to stránka, která:
 ## Kde je nasazeno
 
 - **GitHub:** https://github.com/czhyenacz-g/darbujan
-- **Vercel:** https://darbujan.vercel.app (nebo aktuální preview URL)
+- **Vercel:** https://darbujan.vercel.app
 - **Doména:** darbujan.com — zatím nepropojeno, připraví Hynek
 
 ## Lokální spuštění
