@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 py-24 max-w-2xl mx-auto">
+    <section id="uvod" className="min-h-screen flex flex-col justify-center px-6 py-24 max-w-2xl mx-auto">
       <p className="text-sm font-mono text-gray-400 mb-6 tracking-widest uppercase">hynek dařbujan</p>
 
       <h1 className="text-4xl md:text-5xl font-black leading-tight mb-8 text-gray-900">
