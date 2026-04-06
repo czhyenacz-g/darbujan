@@ -27,6 +27,12 @@ export default function Hero() {
           Napiš mi
         </a>
       </div>
+
+      <a href="#projekty" className="mt-16 text-gray-300 hover:text-gray-600 transition-colors animate-bounce self-start">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </a>
     </section>
   );
 }

@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ScrollArrow to="projekty" />
       <Projects />
       <ScrollArrow to="proc" />
       <Why />
