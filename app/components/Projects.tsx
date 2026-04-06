@@ -12,6 +12,30 @@ const projects = [
     tag: "SaaS",
   },
   {
+    url: "https://vyhledavac-darku.cz",
+    name: "vyhledavac-darku.cz",
+    desc: "",
+    tag: "web",
+  },
+  {
+    url: "https://zdravotniterapie.cz",
+    name: "zdravotniterapie.cz",
+    desc: "",
+    tag: "web",
+  },
+  {
+    url: "https://levnemenu.cz",
+    name: "levnemenu.cz",
+    desc: "",
+    tag: "web",
+  },
+  {
+    url: "https://uklidnaklik.cz",
+    name: "uklidnaklik.cz",
+    desc: "Web pro úklidovou firmu TOPTERKA",
+    tag: "web",
+  },
+  {
     url: null,
     name: "…další",
     desc: "Další projekty přibývají každý týden",
