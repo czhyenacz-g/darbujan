@@ -14,19 +14,19 @@ const projects = [
   {
     url: "https://vyhledavac-darku.cz",
     name: "vyhledavac-darku.cz",
-    desc: "",
+    desc: "Pomáhá najít originální dárek — aby to nebyl trash",
     tag: "web",
   },
   {
     url: "https://zdravotniterapie.cz",
     name: "zdravotniterapie.cz",
-    desc: "",
-    tag: "web",
+    desc: "Rezervační a komunikační systém pro masery a klienty",
+    tag: "SaaS",
   },
   {
     url: "https://levnemenu.cz",
     name: "levnemenu.cz",
-    desc: "",
+    desc: "Protože se člověk má mít kde najíst za levno",
     tag: "web",
   },
   {
