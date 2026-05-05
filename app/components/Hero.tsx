@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="uvod" className="min-h-screen flex flex-col justify-center px-6 py-24 max-w-2xl mx-auto">
       <p className="text-sm font-mono text-gray-400 mb-6 tracking-widest uppercase">hynek dařbujan</p>
 
-      <h1 className="text-4xl md:text-5xl font-black leading-tight mb-8 text-gray-900">
+      <h1 className="text-4xl md:text-5xl font-black leading-tight mb-6 text-gray-900">
         Přes den pracuji v{" "}
         <a href="https://logio.com" target="_blank" rel="noopener noreferrer" className="underline decoration-dotted hover:text-gray-600 transition-colors">Logio</a>{" "}
         na projektu{" "}
@@ -12,6 +12,10 @@ export default function Hero() {
         <br /><br />
         <span className="text-gray-500">Večer stavím vlastní projekty a testuju nápady v praxi.</span>
       </h1>
+
+      <p className="text-sm text-gray-400 mb-8">
+        Příležitostný kendista. Mimo kód mě baví věci, které vyžadují trpělivost a přesnost.
+      </p>
 
       <div className="flex flex-col sm:flex-row gap-3">
         <a
