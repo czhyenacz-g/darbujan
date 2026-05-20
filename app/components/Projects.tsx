@@ -36,6 +36,12 @@ const projects = [
     tag: "web",
   },
   {
+    url: "https://tyckety.cz",
+    name: "tyckety.cz",
+    desc: "Ticketing pro malé české akce — QR platba přímo na účet pořadatele, bez platební brány",
+    tag: "SaaS",
+  },
+  {
     url: null,
     name: "…další",
     desc: "Další projekty přibývají každý týden",
