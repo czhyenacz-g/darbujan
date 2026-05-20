@@ -1,5 +1,17 @@
 const projects = [
   {
+    url: "https://levnemenu.cz",
+    name: "levnemenu.cz",
+    desc: "Protože se člověk má mít kde najíst za levno",
+    tag: "web",
+  },
+  {
+    url: "https://tyckety.cz",
+    name: "tyckety.cz",
+    desc: "Ticketing pro malé české akce — QR platba přímo na účet pořadatele, bez platební brány",
+    tag: "SaaS",
+  },
+  {
     url: "https://kolikpiv.cz",
     name: "kolikpiv.cz",
     desc: "Kolik piv stojí tvůj nákup",
@@ -24,22 +36,10 @@ const projects = [
     tag: "SaaS",
   },
   {
-    url: "https://levnemenu.cz",
-    name: "levnemenu.cz",
-    desc: "Protože se člověk má mít kde najíst za levno",
-    tag: "web",
-  },
-  {
     url: "https://uklidnaklik.cz",
     name: "uklidnaklik.cz",
     desc: "Web pro úklidovou firmu TOPTERKA",
     tag: "web",
-  },
-  {
-    url: "https://tyckety.cz",
-    name: "tyckety.cz",
-    desc: "Ticketing pro malé české akce — QR platba přímo na účet pořadatele, bez platební brány",
-    tag: "SaaS",
   },
   {
     url: null,
