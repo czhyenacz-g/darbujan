@@ -7,5 +7,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1.0,
     },
+    {
+      url: "https://darbujan.com/learning",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://darbujan.com/learning/tsx-vs-lamp",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

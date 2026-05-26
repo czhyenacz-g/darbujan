@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const projects = [
   {
     url: "https://levnemenu.cz",
@@ -42,6 +44,12 @@ const projects = [
     tag: "web",
   },
   {
+    url: "/learning",
+    name: "Školení / learning",
+    desc: "Praktické poznámky a mini školení pro vývojáře, kteří chtějí rychle pochopit nové technologie bez akademické omáčky.",
+    tag: "školení",
+  },
+  {
     url: null,
     name: "…další",
     desc: "Další projekty přibývají každý týden",
@@ -56,7 +64,19 @@ export default function Projects() {
 
       <div className="flex flex-col gap-4">
         {projects.map((p) =>
-          p.url ? (
+          p.url?.startsWith("/") ? (
+            <Link
+              key={p.name}
+              href={p.url}
+              className="group flex items-start justify-between p-5 rounded-2xl border-2 border-gray-100 hover:border-gray-900 transition-colors"
+            >
+              <div>
+                <p className="font-bold text-gray-900 group-hover:underline">{p.name}</p>
+                <p className="text-gray-500 text-sm mt-1">{p.desc}</p>
+              </div>
+              <span className="text-xs font-mono text-gray-400 mt-1 shrink-0 ml-4">{p.tag}</span>
+            </Link>
+          ) : p.url ? (
             <a
               key={p.name}
               href={p.url}
