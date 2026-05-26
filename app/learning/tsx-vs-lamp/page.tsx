@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 const outline = [
+  "Příprava prostředí pro vývoj TSX aplikace",
   "Co je TSX",
   "Mentální model Reactu/TSX",
   "Komponenta jako funkce",
@@ -56,7 +57,7 @@ export default function TsxVsLamp() {
         <ol className="flex flex-col gap-2 text-gray-600">
           {outline.map((item, i) => (
             <li key={i} className="flex gap-3">
-              <span className="text-gray-300 font-mono w-6 shrink-0 text-right">{i + 1}.</span>
+              <span className="text-gray-300 font-mono w-6 shrink-0 text-right">{i}.</span>
               <span>{item}</span>
             </li>
           ))}
