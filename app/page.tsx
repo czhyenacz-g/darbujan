@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Learning from "./components/Learning";
 import Why from "./components/Why";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
@@ -10,6 +11,8 @@ export default function Home() {
     <main>
       <Hero />
       <Projects />
+      <ScrollArrow to="skoleni" />
+      <Learning />
       <ScrollArrow to="proc" />
       <Why />
       <ScrollArrow to="kontakt" />
