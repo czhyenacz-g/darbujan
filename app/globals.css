@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Markdown chapter content */
+.chapter-content h2 {
+  @apply text-xl font-bold mt-12 mb-3 text-gray-900;
+}
+.chapter-content h3 {
+  @apply font-semibold mt-6 mb-2 text-gray-800;
+}
+.chapter-content p {
+  @apply text-gray-600 mb-4 leading-relaxed;
+}
+.chapter-content ul {
+  @apply list-disc list-inside text-gray-600 mb-6 space-y-1 leading-relaxed;
+}
+.chapter-content ol {
+  @apply list-decimal list-inside text-gray-600 mb-6 space-y-1 leading-relaxed;
+}
+.chapter-content li {
+  @apply leading-relaxed;
+}
+.chapter-content code {
+  @apply bg-gray-100 text-gray-800 text-sm px-1.5 py-0.5 rounded font-mono;
+}
+.chapter-content pre {
+  @apply overflow-x-auto rounded-xl bg-gray-950 text-gray-100 p-4 text-sm font-mono leading-relaxed mb-6;
+}
+.chapter-content pre code {
+  @apply bg-transparent text-inherit p-0 rounded-none;
+}
+.chapter-content hr {
+  @apply my-10 border-gray-100;
+}
+.chapter-content a {
+  @apply underline text-gray-900 hover:text-gray-600;
+}
+.chapter-content strong {
+  @apply font-semibold text-gray-800;
+}
+.chapter-content em {
+  @apply text-gray-500 italic;
+}

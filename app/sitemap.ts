@@ -1,6 +1,13 @@
 import type { MetadataRoute } from "next";
+import { publishedChapters } from "@/lib/learning/tsxVsLampChapters";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const chapterUrls: MetadataRoute.Sitemap = publishedChapters.map((ch) => ({
+    url: `https://darbujan.com/learning/tsx-vs-lamp/${ch.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   return [
     {
       url: "https://darbujan.com",
@@ -17,15 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    {
-      url: "https://darbujan.com/learning/tsx-vs-lamp/00-priprava-prostredi",
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: "https://darbujan.com/learning/tsx-vs-lamp/01-co-je-tsx",
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+    ...chapterUrls,
   ];
 }

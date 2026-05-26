@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { tsxVsLampChapters } from "@/lib/learning/tsxVsLampChapters";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://darbujan.com"),
@@ -16,52 +16,6 @@ export const metadata: Metadata = {
     type: "article",
   },
 };
-
-type Chapter = { num: number; title: ReactNode; slug: string | null };
-
-const chapters: Chapter[] = [
-  { num: 0, title: "Příprava prostředí pro vývoj TSX aplikace", slug: "00-priprava-prostredi" },
-  { num: 1, title: "Co je TSX", slug: "01-co-je-tsx" },
-  { num: 2, title: "Mentální model Reactu/TSX", slug: null },
-  { num: 3, title: "Komponenta jako funkce", slug: null },
-  {
-    num: 4,
-    title: <>Vkládání hodnot přes <code className="text-sm bg-gray-100 px-1 rounded">{"{}"}  </code></>,
-    slug: null,
-  },
-  { num: 5, title: "Props", slug: null },
-  {
-    num: 6,
-    title: (
-      <>
-        <code className="text-sm bg-gray-100 px-1 rounded">className</code>,{" "}
-        <code className="text-sm bg-gray-100 px-1 rounded">htmlFor</code> a rozdíly oproti HTML
-      </>
-    ),
-    slug: null,
-  },
-  { num: 7, title: "Eventy", slug: null },
-  {
-    num: 8,
-    title: <>Stav přes <code className="text-sm bg-gray-100 px-1 rounded">useState</code></>,
-    slug: null,
-  },
-  { num: 9, title: "Render seznamů", slug: null },
-  { num: 10, title: "Podmíněné zobrazení", slug: null },
-  {
-    num: 11,
-    title: <><code className="text-sm bg-gray-100 px-1 rounded">children</code></>,
-    slug: null,
-  },
-  { num: 12, title: "Formuláře a controlled inputy", slug: null },
-  { num: 13, title: "TypeScript typování props, stavu a API dat", slug: null },
-  { num: 14, title: "TSX vs jQuery / klasické JS", slug: null },
-  { num: 15, title: "Časté chyby při přechodu z jQuery/DOM stylu", slug: null },
-  { num: 16, title: "Praktický mini příklad", slug: null },
-  { num: 17, title: "Jak o TSX přemýšlet jako back-end vývojář", slug: null },
-  { num: 18, title: "Mini tahák", slug: null },
-  { num: 19, title: "Co se učit po základech TSX", slug: null },
-];
 
 export default function TsxVsLamp() {
   return (
@@ -87,7 +41,7 @@ export default function TsxVsLamp() {
 
         <h2 className="text-xl font-bold mb-4 text-gray-800">Obsah</h2>
         <ol className="flex flex-col gap-1">
-          {chapters.map((ch) =>
+          {tsxVsLampChapters.map((ch) =>
             ch.slug ? (
               <li key={ch.num}>
                 <Link
