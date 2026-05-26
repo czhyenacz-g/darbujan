@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://darbujan.com"),
@@ -16,30 +17,50 @@ export const metadata: Metadata = {
   },
 };
 
-const outline = [
-  "Příprava prostředí pro vývoj TSX aplikace",
-  "Co je TSX",
-  "Mentální model Reactu/TSX",
-  "Komponenta jako funkce",
-  <>Vkládání hodnot přes <code className="text-sm bg-gray-100 px-1 rounded">{"{}"}</code></>,
-  "Props",
-  <>
-    <code className="text-sm bg-gray-100 px-1 rounded">className</code>,{" "}
-    <code className="text-sm bg-gray-100 px-1 rounded">htmlFor</code> a rozdíly oproti HTML
-  </>,
-  "Eventy",
-  <>Stav přes <code className="text-sm bg-gray-100 px-1 rounded">useState</code></>,
-  "Render seznamů",
-  "Podmíněné zobrazení",
-  <><code className="text-sm bg-gray-100 px-1 rounded">children</code></>,
-  "Formuláře a controlled inputy",
-  "TypeScript typování props, stavu a API dat",
-  "TSX vs jQuery / klasické JS",
-  "Časté chyby při přechodu z jQuery/DOM stylu",
-  "Praktický mini příklad",
-  "Jak o TSX přemýšlet jako back-end vývojář",
-  "Mini tahák",
-  "Co se učit po základech TSX",
+type Chapter = { num: number; title: ReactNode; slug: string | null };
+
+const chapters: Chapter[] = [
+  { num: 0, title: "Příprava prostředí pro vývoj TSX aplikace", slug: "00-priprava-prostredi" },
+  { num: 1, title: "Co je TSX", slug: "01-co-je-tsx" },
+  { num: 2, title: "Mentální model Reactu/TSX", slug: null },
+  { num: 3, title: "Komponenta jako funkce", slug: null },
+  {
+    num: 4,
+    title: <>Vkládání hodnot přes <code className="text-sm bg-gray-100 px-1 rounded">{"{}"}  </code></>,
+    slug: null,
+  },
+  { num: 5, title: "Props", slug: null },
+  {
+    num: 6,
+    title: (
+      <>
+        <code className="text-sm bg-gray-100 px-1 rounded">className</code>,{" "}
+        <code className="text-sm bg-gray-100 px-1 rounded">htmlFor</code> a rozdíly oproti HTML
+      </>
+    ),
+    slug: null,
+  },
+  { num: 7, title: "Eventy", slug: null },
+  {
+    num: 8,
+    title: <>Stav přes <code className="text-sm bg-gray-100 px-1 rounded">useState</code></>,
+    slug: null,
+  },
+  { num: 9, title: "Render seznamů", slug: null },
+  { num: 10, title: "Podmíněné zobrazení", slug: null },
+  {
+    num: 11,
+    title: <><code className="text-sm bg-gray-100 px-1 rounded">children</code></>,
+    slug: null,
+  },
+  { num: 12, title: "Formuláře a controlled inputy", slug: null },
+  { num: 13, title: "TypeScript typování props, stavu a API dat", slug: null },
+  { num: 14, title: "TSX vs jQuery / klasické JS", slug: null },
+  { num: 15, title: "Časté chyby při přechodu z jQuery/DOM stylu", slug: null },
+  { num: 16, title: "Praktický mini příklad", slug: null },
+  { num: 17, title: "Jak o TSX přemýšlet jako back-end vývojář", slug: null },
+  { num: 18, title: "Mini tahák", slug: null },
+  { num: 19, title: "Co se učit po základech TSX", slug: null },
 ];
 
 export default function TsxVsLamp() {
@@ -65,16 +86,28 @@ export default function TsxVsLamp() {
         </section>
 
         <h2 className="text-xl font-bold mb-4 text-gray-800">Obsah</h2>
-        <ol className="flex flex-col gap-2 text-gray-600">
-          {outline.map((item, i) => (
-            <li key={i} className="flex gap-3">
-              <span className="text-gray-300 font-mono w-6 shrink-0 text-right">{i}.</span>
-              <span>{item}</span>
-            </li>
-          ))}
+        <ol className="flex flex-col gap-1">
+          {chapters.map((ch) =>
+            ch.slug ? (
+              <li key={ch.num}>
+                <Link
+                  href={`/learning/tsx-vs-lamp/${ch.slug}`}
+                  className="group flex items-start gap-3 p-4 rounded-2xl border-2 border-gray-100 hover:border-gray-900 transition-colors"
+                >
+                  <span className="text-gray-300 font-mono text-sm w-6 shrink-0 text-right pt-0.5">{ch.num}.</span>
+                  <span className="text-gray-900 font-medium group-hover:underline">{ch.title}</span>
+                </Link>
+              </li>
+            ) : (
+              <li key={ch.num} className="flex items-start gap-3 px-4 py-2">
+                <span className="text-gray-200 font-mono text-sm w-6 shrink-0 text-right">{ch.num}.</span>
+                <span className="text-gray-400 text-sm">{ch.title}</span>
+              </li>
+            )
+          )}
         </ol>
 
-        <p className="mt-16 text-gray-400 text-sm italic">Obsah lekce se připravuje — brzy zde.</p>
+        <p className="mt-8 text-gray-400 text-sm italic">Kapitoly 2–19 se připravují.</p>
       </article>
     </main>
   );
