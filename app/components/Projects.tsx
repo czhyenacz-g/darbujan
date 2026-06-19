@@ -44,6 +44,12 @@ const projects = [
     tag: "web",
   },
   {
+    url: "https://osmaliga.cz",
+    name: "osmaliga.cz",
+    desc: "Arkádová fotbalová hra a parodie klubového webu okresní ligy",
+    tag: "hra",
+  },
+  {
     url: "/learning",
     name: "Školení / learning",
     desc: "Praktické poznámky a mini školení pro vývojáře, kteří chtějí rychle pochopit nové technologie bez akademické omáčky.",
