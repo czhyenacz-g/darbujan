@@ -5,11 +5,11 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://darbujan.com"),
   title: "Hynek Dařbujan — weby a projekty",
-  description: "Stavím weby a SaaS projekty večer po práci. Levné menu, ticketing, kalkulačky a další.",
+  description: "Osobní portfolio nezávislého vývojáře. LevnéMenu.cz, NechciVolit.cz, KdeJeMetro.cz, Hlasuju.cz, OsmáLiga.cz a další vlastní projekty.",
   alternates: { canonical: "https://darbujan.com" },
   openGraph: {
     title: "Hynek Dařbujan — weby a projekty",
-    description: "Stavím weby a SaaS projekty večer po práci. Levné menu, ticketing, kalkulačky a další.",
+    description: "Osobní portfolio nezávislého vývojáře. LevnéMenu.cz, NechciVolit.cz, KdeJeMetro.cz, Hlasuju.cz, OsmáLiga.cz a další vlastní projekty.",
     url: "https://darbujan.com",
     siteName: "Hynek Dařbujan",
     locale: "cs_CZ",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hynek Dařbujan — weby a projekty",
-    description: "Stavím weby a SaaS projekty večer po práci.",
+    description: "Osobní portfolio nezávislého vývojáře — vlastní webové aplikace, AI a automatizace.",
     images: ["/api/og?title=Hynek+Da%C5%99bujan&sub=weby+a+projekty"],
   },
   icons: { icon: "/favicon.svg" },

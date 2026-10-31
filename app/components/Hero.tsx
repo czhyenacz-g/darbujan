@@ -10,11 +10,12 @@ export default function Hero() {
         <a href="https://veritico.com" target="_blank" rel="noopener noreferrer" className="underline decoration-dotted hover:text-gray-600 transition-colors">Veritico Stock</a>
         {" "}—{" "}pomáháme firmám lépe řídit zásoby a rozhodování.
         <br /><br />
-        <span className="text-gray-500">Večer stavím vlastní projekty a testuju nápady v praxi.</span>
+        <span className="text-gray-500">Večer jako nezávislý vývojář stavím vlastní webové aplikace, experimentuju s AI a automatizací.</span>
       </h1>
 
       <p className="text-sm text-gray-400 mb-8">
-        Příležitostný kendista. Mimo kód mě baví věci, které vyžadují trpělivost a přesnost.
+        PHP vývojář, který rád dotahuje malé nápady do běžících služeb — denní menu, volby, MHD,
+        hlasování i hry. Příležitostný kendista. Mimo kód mě baví věci, které vyžadují trpělivost a přesnost.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-3">

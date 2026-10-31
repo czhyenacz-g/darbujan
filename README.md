@@ -12,7 +12,7 @@ Není to CV. Je to stránka, která:
 ## Struktura
 
 - **Hero** — jméno, krátký text o práci v Logio/Veritico + vlastních projektech, dvě CTA tlačítka
-- **Projekty** — kolikpiv.cz, za-sobovani.cz, placeholder pro další
+- **Projekty** — rozdělené na Běží / Ve vývoji / Experimenty (`app/components/Projects.tsx`)
 - **Proč pracovat se mnou** — 4 bullet pointy
 - **CTA** — "Chceš něco podobného? Napiš mi"
 - **Kontakt** — email + GitHub
