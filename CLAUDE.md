@@ -211,3 +211,42 @@ Obsahuje příklady:
 - GoatCounter + Vercel Analytics
 - QR kód generování
 - LocalStorage pro uložení nastavení
+
+## Final Report → Content API (povinné po každém úkolu)
+
+Po dokončení každého úkolu (implementace, oprava, analýza) ulož výslednou
+zprávu (Final Report) i do Content API a uživateli vrať její veřejný
+odkaz — uživatel ho vkládá přímo do ChatGPT. Příklad výsledku:
+https://content-api.darbujan.com/r/UccMohrIRCtAW2lKcncviP8y
+
+**Jak na to:**
+
+1. Token je na tomhle stroji v `~/.config/claude-code/content-api-token`
+   (chmod 600). **Nikdy** ho nezapisuj do repozitáře, reportu ani logu.
+   Když soubor chybí (jiný stroj), zeptej se uživatele — token
+   nehádej a nevytvářej nový.
+2. Napiš report v Markdownu v této struktuře: **Summary / Changed files /
+   Implementation / Validation / Git / Issues / Recommended next step**.
+3. Odešli ho `POST https://content-api.darbujan.com/api/reports`:
+
+   ```bash
+   # report.json = {"source":"claude-code","project":"<slug-projektu>",
+   #   "title":"<krátký titulek>","status":"completed|partial|failed",
+   #   "report":"<Markdown>","branch":"<větev>","commit_hash":"<hash, pokud je>"}
+   CONTENT_API_TOKEN=$(cat ~/.config/claude-code/content-api-token) \
+     sh /srv/projects/universal-content-api/scripts/publish-report.sh report.json
+   ```
+
+   Bez helper skriptu stejně funguje přímý `curl -X POST … -H
+   "Authorization: Bearer $CONTENT_API_TOKEN" -H "Content-Type:
+   application/json" -d @report.json`. JSON sestav přes `python3`/`jq`
+   (kvůli escapování Markdownu), ne ručně. Soubor dej do scratchpadu,
+   ne do repozitáře.
+4. Odpověď `201` obsahuje `url` (veřejná HTML stránka `/r/{token}`)
+   a `api_url` (JSON). Finální odpověď uživateli **ukonči holou `url`
+   na samostatném řádku** — nic dalšího na tom řádku.
+5. Když endpoint neodpovídá nebo chybí token, výslovně to napiš — ale
+   kvůli tomu neblokuj dokončení a shrnutí samotného úkolu.
+
+Podrobnosti API: `docs/claude-reports.md` v repozitáři
+`universal-content-api`.
