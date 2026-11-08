@@ -37,6 +37,12 @@ const sections: { title: string; links: Link[] }[] = [
         href: "https://claude.ai",
         tag: "chat",
       },
+      {
+        title: "Google AI Studio",
+        desc: "Když nechci volit, používám Google AI Studio.",
+        href: "https://aistudio.google.com",
+        tag: "studio",
+      },
     ],
   },
   {
@@ -58,6 +64,12 @@ const sections: { title: string; links: Link[] }[] = [
         title: "Claude — billing",
         desc: "Fakturace a spotřeba u Anthropicu.",
         href: "https://platform.claude.com/settings/billing",
+        tag: "billing",
+      },
+      {
+        title: "Google AI Studio — billing",
+        desc: "Fakturace a spotřeba v Google AI Studiu.",
+        href: "https://aistudio.google.com/u/1/billing",
         tag: "billing",
       },
     ],
